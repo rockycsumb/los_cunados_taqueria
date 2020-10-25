@@ -32,16 +32,21 @@ export const NavLogo = styled(LinkR)`
 	color: #fff;
 	justify-self: flex-start;
 	cursor: pointer;
-	font-size: 1.5rem;
+	font-size: 1.85rem;
 	display: flex;
+	flex-direction: column;
 	align-items: center;
 	justify-content: center;
 	margin-left: 24px;
-	font-wieght: bold;
 	text-decoration: none;
-	background: red;
+	background: #ce1126;
 	width: 150px;
 	height: 100px;
+
+	& div {
+		font-family: 'Londrina Solid', cursive;	
+		font-wieght: bold;
+	}
 `;
 
 export const MobileIcon = styled.div`

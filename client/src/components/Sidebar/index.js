@@ -23,22 +23,25 @@ const Sidebar = ({isOpen, toggle}) =>{
 			</Icon>
 			<SidebarWrapper>
 				<SidebarMenu>
-					<SidebarLink to="about" onClick={toggle}>
-						About
+					<SidebarLink to="home" onClick={toggle}>
+						Home
 					</SidebarLink>
-					<SidebarLink to="discover" onClick={toggle}>
-						Discover
+					<SidebarLink to="menu" onClick={toggle}>
+						Menu
 					</SidebarLink>
-					<SidebarLink to="services" onClick={toggle}>
-						Serivces
+					<SidebarLink to="catering" onClick={toggle}>
+						Catering
 					</SidebarLink>
-					<SidebarLink to="signup" onClick={toggle}>
-						Sign Up
+					<SidebarLink to="Location" onClick={toggle}>
+						Location
 					</SidebarLink>
 				</SidebarMenu>
 				<SideBtnWrap>
-					<SidebarRoute to="/">
-						Sign In
+					<SidebarRoute
+						to={{ pathname: "https://www.doordash.com/store/taqueria-los-cunados-milpitas-4964/en-US"}} 
+						target="_blank"
+						>
+						Start Order
 					</SidebarRoute>
 				</SideBtnWrap>
 			</SidebarWrapper>

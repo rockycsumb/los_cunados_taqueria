@@ -38,45 +38,52 @@ const Navbar = ({toggle}) =>{
 			<IconContext.Provider value={{color: 'red'}}> 
 				<Nav scrollNav={scrollNav}>
 					<NavbarContainer>
-						<NavLogo to="/" onClick={toggleHome}>Taqueria</NavLogo>
+						<NavLogo to="/" onClick={toggleHome}>
+							<div>
+								Taqueria
+							</div>
+							<div>
+								Los Cunados
+							</div>
+						</NavLogo>
 						<MobileIcon onClick={toggle} >
 							<FaBars />
 						</MobileIcon>
 						<NavMenu>
 							<NavItem>
 								<NavLinks 
-									to="about"
+									to="home"
 									smooth={true}
 									duration={500}
 									spy={true}
 									exact='true'
 									offset={-80}
 								>
-									About
+									Home
 								</NavLinks>
 							</NavItem>
 							<NavItem>
 								<NavLinks 
-									to="discover"
+									to="menu"
 									smooth={true}
 									duration={500}
 									spy={true}
 									exact='true'
-									offset={-80}
+									offset={0}
 								>
-									Discover
+									Menu
 								</NavLinks>
 							</NavItem>
 							<NavItem>
 								<NavLinks 
-									to="services"
+									to="catering"
 									smooth={true}
 									duration={500}
 									spy={true}
 									exact='true'
-									offset={-80}
+									offset={0}
 								>
-									Services
+									Catering
 								</NavLinks>
 							</NavItem>
 							<NavItem>
@@ -88,20 +95,33 @@ const Navbar = ({toggle}) =>{
 									exact='true'
 									offset={-80}
 								>
-									Sign Up
+									Location
+								</NavLinks>
+							</NavItem>
+							<NavItem>
+								<NavLinks 
+									to="Contact"
+									smooth={true}
+									duration={500}
+									spy={true}
+									exact='true'
+									offset={-80}
+								>
+									Contact
 								</NavLinks>
 							</NavItem>
 						</NavMenu>
 						<NavBtn>
 							<NavBtnLink
-								to="/signin"
+								to={{ pathname: "https://www.doordash.com/store/taqueria-los-cunados-milpitas-4964/en-US"}} 
 								smooth={true}
 								duration={500}
 								spy={true}
 								exact='true'
 								offset={-80}
+								target="_blank"
 							>
-								Sign In
+								Start Order
 							</NavBtnLink>
 						</NavBtn>
 					</NavbarContainer>
