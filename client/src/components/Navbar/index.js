@@ -88,12 +88,12 @@ const Navbar = ({toggle}) =>{
 							</NavItem>
 							<NavItem>
 								<NavLinks 
-									to="signup"
+									to="location"
 									smooth={true}
 									duration={500}
 									spy={true}
 									exact='true'
-									offset={-80}
+									offset={0}
 								>
 									Location
 								</NavLinks>

@@ -33,13 +33,13 @@ export const homeObjTwo = {
 }
 
 export const homeObjThree = {
-	id: 'signup',
+	id: 'location',
 	lightBg: true,
 	lightText: false,
 	lightTextDesc: false,
-	topLine: 'Sign in Please',
-	headLine: 'Unlimited Sign in with zero fees',
-	description: 'Get Access to our exclusive app that allows you to send unlimited transactions without getting charged any fees',
+	topLine: 'Located in South bay',
+	headLine: 'At McCarthy Ranch in Milpitas',
+	description: 'Outdoor seating is open, indoor seating is available upon reservation. Indoor ordering is available however online order is preferred',
 	buttonLabel: 'Get Started',
 	imgStart: false,
 	img: require('../images/svg-3.svg'),
