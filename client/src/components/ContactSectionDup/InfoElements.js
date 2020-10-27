@@ -36,11 +36,15 @@ export const Column1 = styled.div`
 	margin-bottom: 15px;
 	padding: 0 15px;
 	grid-area: col1;
+	height: 460px;
+	@media screen and (max-width: 768px){
+		height: 250px;
+	}
 `;
 
 export const Column2 = styled.div`
 	margin-bottom: 15px;
-	padding: 0 15px;
+	padding: 0 20px;
 	grid-area: col2;
 `;
 
@@ -86,12 +90,12 @@ export const BtnWrap = styled.div`
 	justify-content: flex-start;
 `
 
-export const MapWrap = styled.div`
+export const ImgWrap = styled.div`
 	max-width: 555px;
 	height: 100%;
 `
 
-export const Map = styled.div`
+export const Img = styled.img`
 	width: 100%;
 	margin: 0 0 10px 0;
 	padding-right: 0;

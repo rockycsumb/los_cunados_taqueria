@@ -28,7 +28,7 @@ const HeroSection = () =>{
 	return (
 		<HeroContainer id="home">
 			<HeroBg>
-				<VideoBg autoPlay loop muted src={Video} type='video/mp4' />
+				<VideoBg autoPlay loop muted src={Video} poster={require('../images/hp_bg.png')} type='video/mp4' />
 			</HeroBg>
 			<HeroContent>
 				<HeroH1>Taqueria Los Cunados</HeroH1>

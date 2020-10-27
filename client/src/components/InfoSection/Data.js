@@ -29,7 +29,7 @@ export const homeObjTwo = {
 	alt: 'Catering',
 	dark: true,
 	primary: true,
-	darkText: true
+	darkText: false
 }
 
 export const homeObjThree = {

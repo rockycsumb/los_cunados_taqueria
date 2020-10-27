@@ -18,6 +18,10 @@ export const InfoWrapper = styled.div`
 	margin-left: auto;
 	padding: 0 24px;
 	justify-content: center;
+
+	@media screen and (max-width: 480px){
+		height: 550px;
+	}
 `;
 
 
