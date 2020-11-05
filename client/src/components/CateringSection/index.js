@@ -12,7 +12,12 @@ import {
 	Subtitle,
 	BtnWrap,
 	ImgWrap,
-	Img
+	Img,
+	Form,
+	FormRow,
+	FormInput,
+	FormTextArea,
+	FormButton
 } from './CateringElements';
 
 const Catering = ({
@@ -64,6 +69,27 @@ const Catering = ({
 							</ImgWrap>
 						</Column2>
 					</CateringRow>
+					
+					<h1>Catering Form goes here</h1>
+					
+					<Form>
+						<FormRow>
+							<FormInput>Name</FormInput>
+							<FormInput>Email</FormInput>
+						</FormRow>
+						<FormRow>
+							<FormInput>Address</FormInput>
+							<FormInput>Phone</FormInput>
+						</FormRow>
+						<FormRow>
+							<FormInput>Day of Event</FormInput>
+							<FormInput>Time of Event</FormInput>
+							<FormInput>Number of People</FormInput>
+						</FormRow>
+						<FormTextArea />
+						<FormButton>Submit</FormButton>
+					</Form>
+					
 				</CateringWrapper>
 			</CateringContainer>
 		</>

@@ -2,13 +2,18 @@ import styled from 'styled-components';
 
 export const CateringContainer = styled.div`
 	color: #fff;
+	height: 1100px;
+	padding-top: 100px;
 	background: ${({lightBg}) => (lightBg ? '#f9f9f9' : '#010606')};
 	@media screen and (max-width: 768px){
 		padding: 100px 0;
+		height: 1700px;
 	}
+
 `;
 
 export const CateringWrapper = styled.div`
+
 	display: grid;
 	z-index: 1;
 	height: 860px;
@@ -18,9 +23,14 @@ export const CateringWrapper = styled.div`
 	margin-left: auto;
 	padding: 0 24px;
 	justify-content: center;
+	
+	// @media screen and (max-width: 768px){
+	// 	padding: 100px 0;
+	// 	height: 1000px;
+	// }
 
 	@media screen and (max-width: 480px){
-		height: 550px;
+		height: 1000px;
 	}
 `;
 
@@ -102,6 +112,67 @@ export const Img = styled.img`
 	padding-right: 0;
 `;
 
+export const Form = styled.form`
+	border-radius: 5px;
+	
+	background-color: #f2f2f2;
+	padding: 20px;
+	color: black;
+`;
+
+export const FormRow = styled.div`
+	
+	display: flex;
+	justify-content: center;
+
+	@media screen and (max-width: 768px){
+		flex-direction: column;
+
+	}
+`;
+
+export const FormInput = styled.div`
+	  width: 100%;
+	  padding: 12px;
+	  border: 1px solid #ccc;
+	  border-radius: 4px;
+	  box-sizing: border-box;
+	  margin-top: 6px;
+	  margin-bottom: 16px;
+	  resize: vertical;
+`;
+
+export const FormTextArea = styled.div`
+	  width: 100%;
+	  padding: 12px;
+	  border: 1px solid #ccc;
+	  border-radius: 4px;
+	  box-sizing: border-box;
+	  margin-top: 6px;
+	  margin-bottom: 16px;
+	  resize: vertical;
+	  height: 150px;
+
+`;
+
+
+export const FormButton = styled.div`
+	  background-color: #01bf71;
+	  text-align: center;
+	  color: white;
+	  padding: 12px 20px;
+	  border: none;
+	  border-radius: 4px;
+	  cursor: pointer;
+      border: 1px solid #01bf71;
+	  
+      &:hover {
+		transition: all 0.2s ease-in-out;
+		background: #fff;
+		color: #010606;
+		border: 1px solid #01bf71;
+	}
+`;
 
 
 
