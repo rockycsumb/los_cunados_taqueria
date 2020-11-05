@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import {Link} from 'react-router-dom';
+import {Link} from 'react-scroll';
 
 export const FooterContainer = styled.footer`
 	background-color: #101522;
@@ -63,6 +63,10 @@ export const FooterLink = styled(Link)`
 	&:hover {
 		color: #01bf71;
 		transition: 0.3s ease-out;
+	}
+
+	&:visited {
+		color: #fff;
 	}
 `;
 

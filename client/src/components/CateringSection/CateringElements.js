@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const ContactContainer = styled.div`
+export const CateringContainer = styled.div`
 	color: #fff;
 	background: ${({lightBg}) => (lightBg ? '#f9f9f9' : '#010606')};
 	@media screen and (max-width: 768px){
@@ -8,7 +8,7 @@ export const ContactContainer = styled.div`
 	}
 `;
 
-export const ContactWrapper = styled.div`
+export const CateringWrapper = styled.div`
 	display: grid;
 	z-index: 1;
 	height: 860px;
@@ -18,12 +18,15 @@ export const ContactWrapper = styled.div`
 	margin-left: auto;
 	padding: 0 24px;
 	justify-content: center;
+
+	@media screen and (max-width: 480px){
+		height: 550px;
+	}
 `;
 
 
-export const ContactRow = styled.div`
+export const CateringRow = styled.div`
 	
-	border: 4px solid orange;
 	display: grid;
 	grid-auto-columns: minmax(auto, 1fr);
 	align-items: center;
@@ -38,17 +41,12 @@ export const Column1 = styled.div`
 	margin-bottom: 15px;
 	padding: 0 15px;
 	grid-area: col1;
-	height: 460px;
-	@media screen and (max-width: 768px){
-		height: 250px;
-	}
 `;
 
 export const Column2 = styled.div`
 	margin-bottom: 15px;
-	padding: 0 20px;
+	padding: 0 15px;
 	grid-area: col2;
-	height: 460px;
 `;
 
 export const TextWrapper = styled.div`
@@ -104,45 +102,6 @@ export const Img = styled.img`
 	padding-right: 0;
 `;
 
-export const ContactMessageContainer = styled.div`
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	height: 300px;
-`;
-
-export const SpinnerBorder = styled.div`
-	border: 2px solid yellow;
-	width: 5em; 
-	height: 5em;
-`;
-
-export const LoadingMessage = styled.div`
-	border: 2px solid red;
-	width: 1em;
-	height: 1em;
-`;
-
-export const ContactForm = styled.div`
-	border: 2px solid yellow;
-`;
-
-export const ContactFormRow = styled.div`
-	display: flex;
-	flex-direction: column;
-
-	@media screen and (max-width: 768px){
-		flex-direction: row;
-		justify-content: center;
-	}
-`;
-
-
-export const ContactFormRowItem = styled.div`
-	@media screen and (max-width: 768px){
-		margin-right: 10px;
-	}
-`;
 
 
 

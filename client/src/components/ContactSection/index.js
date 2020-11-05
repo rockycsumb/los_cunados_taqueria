@@ -1,9 +1,47 @@
 import React, {useState} from 'react';
-import {Link} from 'react-router-dom';
-import './contact.css';
-import emailjs from 'emailjs-com';
+import {Button} from '../ButtonElement';
+import { 
+	ContactContainer,
+	ContactWrapper,
+	ContactRow,
+	ContactFormContainer,
+	ContactFormRow,
+	ContactFormRowItem,
+	Column1,
+	Column2,
+	TextWrapper,
+	TopLine,
+	Heading,
+	Subtitle,
+	BtnWrap,
+	ImgWrap,
+	Img,
+	ContactMessageContainer,
+	SpinnerBorder,
+	LoadingMessage,
+	Form,
+	FormLabel,
+	FormInput,
+	FormTextArea,
+	FormButton
+} from './ContactElements';
 
-const Contact = () =>{
+const Contact = ({
+	lightBg,
+	id,
+	imgStart,
+	topLine,
+	lightText,
+	headLine,
+	darkText,
+	description,
+	buttonLabel,
+	img,
+	alt,
+	primary,
+	dark,
+	dark2
+}) =>{
 	const [sendingMessage, setSendingMessage] = useState(false);
 	const [messageSent, setMessageSent] = useState(false);
 	const [formData, setFormData] = useState({
@@ -56,95 +94,93 @@ const Contact = () =>{
 	}
 	
 	return (
-		<div className="Contact pb-5">
-			<div className="Contact-title-header">
-				<div className="Contact-title-item">
-					Contact
-				</div>
-				<div>
-					<p>Please contact me for any questions</p>
-				</div>
-			</div>
-			
-			{sendingMessage && !messageSent ? (
-				<div className="Contact-message-container">
-					<div class="spinner-border spinner-size text-secondary" role="status">
-					  <span class="sr-only">Loading...</span>
-					</div>
-				</div>
-				
-			) : (
-				
-				messageSent ? (
-					<div className="Contact-message-container">
-						<div>
-							<h3>Message Sent!</h3>
-							
-						</div>
-					</div>
-					
-				) : (
-				<div className="Contact-form">
-				<form onSubmit={e => onSubmit(e)}>
-					<div className="form-group text-center  Contact-form-row">
-						<div className="Contact-form-row-item">
-							<label className="form-control-label" htmlFor="input-name">
-								Name
-							</label>
-							<input
-								type="text"
-								id="input-name"
-								className="form-control"
+		<>
+			<ContactContainer lightBg={lightBg} id={id}>
+				<ContactWrapper>
+					<ContactRow imgStart={imgStart}>
+						<Column1>
+							<TextWrapper>
+								<TopLine>{topLine}</TopLine>
+								<Heading lightText={lightText}>{headLine}</Heading>
+								<Subtitle darkText={darkText}>{description}</Subtitle>  
 								
-								value={name}
-								name="name"
-								onChange={e => onChange(e)}
-								required
-							/>
-						</div>
-						<div>
-							<label className="form-control-label" htmlFor="input-email">
-								Email
-							</label>
-							<input
-								type="email"
-								id="input-email"
-								className="form-control"
-								
-								value={email}
-								name="email"
-								onChange={e => onChange(e)}
-								required
-							/>
-						</div>
-					</div>
-					<div className="Contact-textarea-container">
-						<div className="form-group text-center Contact-textarea-item">
-							<label htmlFor="input-textarea">Message</label>
-							<textarea 
-								className="form-control Contact-form-textarea" 
-								id="input-textarea" 
-								rows="8"
-								placeholder=""
-								name="message"
-								value={message}
-								onChange={e => onChange(e)}
-							></textarea>
-						</div>
-					</div>
-					<div className="Contact-form-button-container">
-						<div className="Contact-form-submit">
-							<button 
-								type="submit" 
-								className="btn btn-dark btn-lg btn-block"
-								>Submit
-							</button>
-						</div>
-					</div>
-				</form>
-			</div>
-			))}
-		</div>
+							</TextWrapper>
+						</Column1>
+						<Column2>
+							{sendingMessage && !messageSent ? (
+								<ContactMessageContainer>
+									<SpinnerBorder>
+										<LoadingMessage>
+											
+										</LoadingMessage>
+									</SpinnerBorder>
+								</ContactMessageContainer>
+									
+
+							) : (
+
+								messageSent ? (
+									<ContactMessageContainer>
+										<div>
+											<h3>Message Sent!</h3>
+										</div>
+									</ContactMessageContainer>
+
+								) : (
+								<ContactFormContainer>
+									
+									<Form onSubmit={e => onSubmit(e)}>
+										<FormLabel htmlFor="fullname">
+											Name
+										</FormLabel>
+										<FormInput 
+											type="text"
+											id="fullname"
+											name="name"
+											placeholder="Your Name"
+											value={name}
+											onChange={e => onChange(e)}
+											/>
+										
+										<FormLabel htmlFor="email">
+											Email
+										</FormLabel>
+										<FormInput
+											type="email"
+											id="email"
+											name="email"
+											value={email}
+											onChange={e => onChange(e)}
+											placeholder="Email"
+										/>
+										
+										<FormLabel htmlFor="message">
+											Message
+										</FormLabel>
+										
+										<FormTextArea 
+											id="message"
+											name="message"
+											value={message}
+											onChange={e => onChange(e)}
+											placeholder="Say something"
+											
+											/>
+										
+										<FormButton 
+											type="submit"
+											>
+											Submit
+										</FormButton>
+									</Form>
+										
+								</ContactFormContainer>
+							))}
+						</Column2>
+					</ContactRow>
+				</ContactWrapper>
+			</ContactContainer>
+		</>
 	)
 }
 

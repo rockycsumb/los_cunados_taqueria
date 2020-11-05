@@ -3,12 +3,14 @@ import Sidebar from '../components/Sidebar';
 import Navbar from '../components/Navbar';
 import HeroSection from '../components/HeroSection';
 import InfoSection from '../components/InfoSection';
+import CateringSection from '../components/CateringSection';
 import LocationSection from '../components/LocationSection';
-import ContactSection from '../components/ContactSectionDup';
+import ContactSection from '../components/ContactSection';
 import Footer from '../components/Footer';
+import {catering} from '../components/CateringSection/Data';
 import {homeObjOne, homeObjTwo} from '../components/InfoSection/Data';
 import {locationData} from '../components/LocationSection/Data';
-import {homeObjTwo as ContactData} from '../components/ContactSectionDup/Data';
+import {homeObjTwo as ContactData} from '../components/ContactSection/Data';
 
 const Home = () =>{
 	const [isOpen, setIsOpen] = useState(false);
@@ -24,7 +26,7 @@ const Home = () =>{
 			<Navbar toggle={toggle} />
 			<HeroSection />
 			<InfoSection {...homeObjOne}/>
-			<InfoSection {...homeObjTwo}/>
+			<CateringSection {...catering}/>
 			<LocationSection {...locationData}/>
 			<ContactSection {...ContactData} />
 			<Footer />

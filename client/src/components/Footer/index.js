@@ -36,21 +36,57 @@ const Footer = () => {
 					<FooterLinksWrapper>
 						<FooterLinkItems>
 							<FooterLinkTitle></FooterLinkTitle>
-							<FooterLink to="/signin">Home</FooterLink>
+							<FooterLink 
+									to="home"
+									smooth={true}
+									duration={500}
+									spy={true}
+									exact='true'
+									offset={-80}
+								>
+								Home
+							</FooterLink>
 						</FooterLinkItems>
 						<FooterLinkItems>
 							<FooterLinkTitle></FooterLinkTitle>
-							<FooterLink to="/signin">Menu</FooterLink>
+							<FooterLink 
+									to="menu"
+									smooth={true}
+									duration={500}
+									spy={true}
+									exact='true'
+									offset={0}
+								>
+								Menu
+							</FooterLink>
 						</FooterLinkItems>
 					</FooterLinksWrapper>
 					<FooterLinksWrapper>
 						<FooterLinkItems>
 							<FooterLinkTitle></FooterLinkTitle>
-							<FooterLink to="/signin">Catering</FooterLink>
+							<FooterLink 
+									to="catering"
+									smooth={true}
+									duration={500}
+									spy={true}
+									exact='true'
+									offset={0}
+								>
+								Catering
+							</FooterLink>
 						</FooterLinkItems>
 						<FooterLinkItems>
 							<FooterLinkTitle></FooterLinkTitle>
-							<FooterLink to="/signin">Contact</FooterLink>
+							<FooterLink 
+									to="contact"
+									smooth={true}
+									duration={500}
+									spy={true}
+									exact='true'
+									offset={0}
+								>
+								Contact
+							</FooterLink>
 						</FooterLinkItems>
 					</FooterLinksWrapper>
 				</FooterLinksContainer>
