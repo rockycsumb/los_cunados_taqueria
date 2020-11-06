@@ -2,12 +2,12 @@ import styled from 'styled-components';
 
 export const CateringContainer = styled.div`
 	color: #fff;
-	height: 1100px;
+	height: 1200px;
 	padding-top: 100px;
 	background: ${({lightBg}) => (lightBg ? '#f9f9f9' : '#010606')};
 	@media screen and (max-width: 768px){
 		padding: 100px 0;
-		height: 1700px;
+		height: 1900px;
 	}
 
 `;
@@ -120,6 +120,11 @@ export const Form = styled.form`
 	color: black;
 `;
 
+export const FormItem = styled.div`
+	margin: 10px;
+	width: 100%;
+`;
+
 export const FormRow = styled.div`
 	
 	display: flex;
@@ -127,11 +132,17 @@ export const FormRow = styled.div`
 
 	@media screen and (max-width: 768px){
 		flex-direction: column;
+		align-items: center;
 
 	}
 `;
 
-export const FormInput = styled.div`
+export const FormLabel = styled.label`
+	
+	
+`;
+
+export const FormInput = styled.input`
 	  width: 100%;
 	  padding: 12px;
 	  border: 1px solid #ccc;
@@ -142,7 +153,7 @@ export const FormInput = styled.div`
 	  resize: vertical;
 `;
 
-export const FormTextArea = styled.div`
+export const FormTextArea = styled.textarea`
 	  width: 100%;
 	  padding: 12px;
 	  border: 1px solid #ccc;
@@ -156,7 +167,7 @@ export const FormTextArea = styled.div`
 `;
 
 
-export const FormButton = styled.div`
+export const FormButton = styled.button`
 	  background-color: #01bf71;
 	  text-align: center;
 	  color: white;

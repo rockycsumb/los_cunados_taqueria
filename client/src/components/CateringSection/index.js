@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {Button} from '../ButtonElement';
 import { 
 	CateringContainer,
@@ -15,6 +15,8 @@ import {
 	Img,
 	Form,
 	FormRow,
+	FormLabel,
+	FormItem,
 	FormInput,
 	FormTextArea,
 	FormButton
@@ -36,6 +38,38 @@ const Catering = ({
 	dark,
 	dark2
 }) =>{
+	
+	const [formData, setFormData] = useState({
+		name: "",
+		email: "",
+		address: "",
+		phone: "",
+		date: "",
+		time: "",
+		persons: "",
+		message: ""
+	});
+	
+	const {
+		name,
+		email,
+		address,
+		phone,
+		date,
+		time,
+		persons,
+		message
+	} = formData;
+	
+	const onChange = e => 
+		setFormData({...formData, [e.target.name]: e.target.value});
+	
+	
+	const onSubmit = e =>{
+		e.preventDefault();
+		console.log('sent ', formData);
+	}
+	
 	
 	return (
 		<>
@@ -70,24 +104,101 @@ const Catering = ({
 						</Column2>
 					</CateringRow>
 					
-					<h1>Catering Form goes here</h1>
+					<h2>Send us information about the event:</h2>
 					
-					<Form>
+					<Form onSubmit={e => onSubmit(e)}>
 						<FormRow>
-							<FormInput>Name</FormInput>
-							<FormInput>Email</FormInput>
+							<FormItem>
+								<FormLabel htmlFor="name">
+									Name
+								</FormLabel>
+								<FormInput 
+									type="text"
+									id="name"
+									name="name"
+									value={name}
+									onChange={e => onChange(e)}
+									placeholder="Name"
+								/>
+							</FormItem>
+							
+							<FormItem>
+							<FormLabel htmlFor="email">
+								Email
+							</FormLabel>
+								<FormInput 
+									type="text"
+									id="email"
+									name="email"
+									value={email}
+									onChange={e => onChange(e)}
+									placeholder="Email"
+								/>
+							</FormItem>
 						</FormRow>
 						<FormRow>
-							<FormInput>Address</FormInput>
-							<FormInput>Phone</FormInput>
+							<FormItem>
+								<FormLabel htmlFor="address">
+									Address
+								</FormLabel>
+								<FormInput
+									type="text"
+									id="address"
+									name="address"
+									value={address}
+									onChange={e => onChange(e)}
+									placeholder="Address"
+								/>
+							</FormItem>	
+							<FormItem>
+								<FormLabel htmlFor="phone">
+									Phone
+								</FormLabel>
+								<FormInput
+									type="text"
+									id="phone"
+									name="phone"
+									value={phone}
+									onChange={e => onChange(e)}
+									placeholder="Phone"
+								/>
+							</FormItem>
 						</FormRow>
 						<FormRow>
-							<FormInput>Day of Event</FormInput>
-							<FormInput>Time of Event</FormInput>
-							<FormInput>Number of People</FormInput>
+							<FormItem>
+								<FormLabel htmlFor="date">
+									Date of event
+								</FormLabel>
+								<FormInput 
+
+								/>
+							</FormItem>
+							<FormItem>
+								<FormLabel htmlFor="time">
+									Time of the event
+								</FormLabel>
+								<FormInput 
+
+								/>
+							</FormItem>
+							<FormItem>
+								<FormLabel htmlFor="persons">
+									Number of persons
+								</FormLabel>
+								<FormInput 
+
+								/>
+							</FormItem>
+							
 						</FormRow>
-						<FormTextArea />
-						<FormButton>Submit</FormButton>
+						<FormTextArea 
+							id="message"
+							name="message"
+							value={message}
+							onChange={e => onChange(e)}
+							placeholder="Comments"
+						/>
+						<FormButton type="submit">Submit</FormButton>
 					</Form>
 					
 				</CateringWrapper>
