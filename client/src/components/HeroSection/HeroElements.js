@@ -97,7 +97,7 @@ export const HeroBtnLink = styled(Link)`
 	border-radius: 50px;
 	background: #01bf71;
 	white-space: nowrap;
-	padding: 10px 22px;
+	padding: 10px 25px;
 	color: #010606;
 	font-size: 16px;
 	outline: none;
@@ -105,6 +105,8 @@ export const HeroBtnLink = styled(Link)`
 	cursor: pointer;
 	transition: all 0.2s ease-in-out;
 	text-decoration: none;
+	display: flex;
+	align-items: center;
 
 	&:hover {
 		transition: all 0.2s ease-in-out;
@@ -114,13 +116,13 @@ export const HeroBtnLink = styled(Link)`
 `
 
 export const ArrowForward = styled(MdArrowForward)`
-	padding-top: 5px;
+	
 	margin-left: 8px;
 	font-size: 20px;
 `;
 
 export const ArrowRight = styled(MdKeyboardArrowRight)`
-	padding-top: 5px;
+	
 	margin-left: 8px;
 	font-size: 20px;
 `;

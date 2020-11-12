@@ -53,6 +53,9 @@ export const Column2 = styled.div`
 	padding: 10px 15px;
 	grid-area: col2;
 	height: 380px;
+	background: #F9F9F9;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);	
+	
 `;
 
 export const TextWrapper = styled.div`
@@ -126,12 +129,17 @@ export const Icon = styled(GiTacos)`
 `
 export const MenuDisplayContainer = styled.div`
 	margin-top: 15px;
-	
 `
 
 export const MenuList = styled.div`
 	display:flex;
 	justify-content: space-between;
+	background: #F5F6FA;
+	padding: 2px;
+	margin: 2px;
+	&:nth-child(2n+1){
+		background: #f5e4e4;
+	}
 `
 export const MenuItem = styled.div`
 	font-size: 18px;
@@ -139,10 +147,11 @@ export const MenuItem = styled.div`
 `
 
 export const MenuItemButton = styled.button`
-	border-radius: 50px;
+	border-radius: 30px;
+	font-size: 12px;
 	border: 1px solid #01bf71;
 	background: #01bf71;
-	padding: 10px 22px;
+	padding: 5px 12px;
 	cursor: pointer;
 	transition: all 0.2s ease-in-out;
 	text-decoration: none;

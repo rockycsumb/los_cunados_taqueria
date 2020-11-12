@@ -48,7 +48,8 @@ const Menu = ({
 			{item: "Lunch Burrito", price: 5.99},
 			{item: "Lunch Nachos", price: 5.99},
 			{item: "Lunch Burrito", price: 5.99},
-			{item: "Lunch Nachos", price: 5.99}
+			{item: "Lunch Nachos", price: 5.99},
+			{item: "Lunch Burrito", price: 5.99}
 	])
 	
 	const[switching, setSwitching] = useState(false);
@@ -85,8 +86,6 @@ const Menu = ({
 			{item: "Taco Burrito", price: 5.99},
 			{item: "Taco Nachos", price: 5.99},
 			{item: "Taco Burrito", price: 5.99},
-			{item: "Taco Nachos", price: 5.99},
-			{item: "Taco Burrito", price: 5.99},
 			{item: "Taco Nachos", price: 5.99}
 		],
 		Catering: [
@@ -97,10 +96,7 @@ const Menu = ({
 			{item: "Catering Nachos", price: 5.99},
 			{item: "Catering Burrito", price: 5.99},
 			{item: "Catering Nachos", price: 5.99},
-			{item: "Catering Burrito", price: 5.99},
-			{item: "Catering Nachos", price: 5.99},
-			{item: "Catering Burrito", price: 5.99},
-			{item: "Catering Nachos", price: 5.99}
+			{item: "Catering Burrito", price: 5.99}
 		]
 	}
 	

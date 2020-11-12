@@ -20,7 +20,7 @@ const MenuDisplay = ({info}) =>{
 						{item.item}
 					</MenuItem>
 					<MenuPrice>
-						{item.price}
+						${item.price}
 					</MenuPrice>
 				</MenuList>	
 				))}
