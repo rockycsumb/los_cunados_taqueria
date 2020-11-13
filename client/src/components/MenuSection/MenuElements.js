@@ -47,14 +47,14 @@ export const Column1 = styled.div`
 `;
 
 export const Column2 = styled.div`
-	border: 1px solid black;
-	border-radius: 10px;
+	// border: 1px solid black;
+	// border-radius: 10px;
 	margin-bottom: 15px;
 	padding: 10px 15px;
 	grid-area: col2;
 	height: 380px;
-	background: #F9F9F9;
-	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);	
+	// background: #F9F9F9;
+	// box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);	
 	
 `;
 
@@ -137,9 +137,10 @@ export const MenuList = styled.div`
 	background: #F5F6FA;
 	padding: 2px;
 	margin: 2px;
-	&:nth-child(2n+1){
-		background: #f5e4e4;
-	}
+	border-bottom: 1px solid #010606;
+	// &:nth-child(2n+1){
+	// 	background: #f5e4e4;
+	// }
 `
 export const MenuItem = styled.div`
 	font-size: 18px;

@@ -51,13 +51,14 @@ const Menu = ({
 			{item: "Lunch Nachos", price: 5.99},
 			{item: "Lunch Burrito", price: 5.99}
 	])
+	const[menuItemSelect, setMenuItemSelect] = useState("Lunch");
 	
 	const[switching, setSwitching] = useState(false);
 	
 	useEffect(()=>{
 		
 		
-	}, displayInfo, switching);
+	}, displayInfo, switching, menuItemSelect);
 	
 	let menuItem = [
 		"Lunch",
@@ -102,15 +103,13 @@ const Menu = ({
 	
 	const handleClick = e =>{
 		e.preventDefault();
-		console.log(e.target.value, " from handle click ")
 		
 		setSwitching(true);
 		setTimeout(()=>{
-			console.log("switch inside timeout ", switching);
 			setSwitching(false)
-			
 		}, 1000);
 		
+		setMenuItemSelect(e.target.value);
 		setDisplayInfo(menuItemInfo[e.target.value]);
 	}
 	
@@ -143,6 +142,7 @@ const Menu = ({
 						<Column2>
 							<TextWrapper>
 								<TopLine>Menu</TopLine>
+								<Heading lightText={lightText}>{menuItemSelect}</Heading>
 								
 								{
 									menuItem.map(item =>(
