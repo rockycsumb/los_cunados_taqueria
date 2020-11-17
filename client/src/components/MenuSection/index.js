@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import {Button} from '../ButtonElement';
 import MenuDisplay from './MenuDisplay';
+import axios from 'axios';
 
 import './menudisplay.css';
 
@@ -54,6 +55,22 @@ const Menu = ({
 	const[menuItemSelect, setMenuItemSelect] = useState("Lunch");
 	
 	const[switching, setSwitching] = useState(false);
+	
+	
+	
+	useEffect(()=>{
+		const getMenuData = async () => {
+			await axios.get('https://strapi-test-demo.herokuapp.com/posts')
+			.then(response => response)
+			.then(data => {
+				console.log('from use eff ', data);
+			})
+		}
+		getMenuData();
+	}, []);
+	  
+	
+	
 	
 	useEffect(()=>{
 		
