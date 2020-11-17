@@ -9,10 +9,10 @@ import {
 	HeroH1, 
 	HeroP,
 	HeroBtnWrapper,
+	HeroBtnLink,
 	ArrowForward,
 	ArrowRight
 } from './HeroElements';
-
 
 
 const HeroSection = () =>{
@@ -27,7 +27,7 @@ const HeroSection = () =>{
 	return (
 		<HeroContainer id="home">
 			<HeroBg>
-				<VideoBg autoPlay loop muted src={Video} type='video/mp4' />
+				<VideoBg autoPlay loop muted src={Video} poster={require('../images/taqueria1.jpg')} type='video/mp4' />
 			</HeroBg>
 			<HeroContent>
 				<HeroH1>Taqueria Los Cunados</HeroH1>
@@ -36,21 +36,16 @@ const HeroSection = () =>{
 					quesadillas, tortas and more. Catering available.
 				</HeroP>
 				<HeroBtnWrapper>
-					<Button 
-						to="signup" 
+					<HeroBtnLink
+						to={{ pathname: "https://www.doordash.com/store/taqueria-los-cunados-milpitas-4964/en-US"}}
+						target="_blank"
 						onMouseEnter={onHover} 
 						onMouseLeave={onHover}
 						primary='true'
 						dark='true'
-						to="about"
-						smooth={true}
-						duration={500}
-						spy={true}
-						exact='true'
-						offset={-80}
 						>
 						Start Order {hover ? <ArrowForward /> : <ArrowRight />}
-					</Button>
+					</HeroBtnLink>
 				</HeroBtnWrapper>
 			</HeroContent>
 		</HeroContainer>

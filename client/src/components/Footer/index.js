@@ -35,47 +35,67 @@ const Footer = () => {
 				<FooterLinksContainer>
 					<FooterLinksWrapper>
 						<FooterLinkItems>
-							<FooterLinkTitle>About Us</FooterLinkTitle>
-							<FooterLink to="/signin">How it Works</FooterLink>
-							<FooterLink to="/signin">Testimonials</FooterLink>
-							<FooterLink to="/signin">Careers</FooterLink>
-							<FooterLink to="/signin">Investors</FooterLink>
-							<FooterLink to="/signin">Terms of Service</FooterLink>
+							<FooterLinkTitle></FooterLinkTitle>
+							<FooterLink 
+									to="home"
+									smooth={true}
+									duration={500}
+									spy={true}
+									exact='true'
+									offset={-80}
+								>
+								Home
+							</FooterLink>
 						</FooterLinkItems>
 						<FooterLinkItems>
-							<FooterLinkTitle>Videos</FooterLinkTitle>
-							<FooterLink to="/signin">How it Works</FooterLink>
-							<FooterLink to="/signin">Testimonials</FooterLink>
-							<FooterLink to="/signin">Careers</FooterLink>
-							<FooterLink to="/signin">Investors</FooterLink>
-							<FooterLink to="/signin">Terms of Service</FooterLink>
+							<FooterLinkTitle></FooterLinkTitle>
+							<FooterLink 
+									to="menu"
+									smooth={true}
+									duration={500}
+									spy={true}
+									exact='true'
+									offset={0}
+								>
+								Menu
+							</FooterLink>
 						</FooterLinkItems>
 					</FooterLinksWrapper>
 					<FooterLinksWrapper>
 						<FooterLinkItems>
-							<FooterLinkTitle>Contact</FooterLinkTitle>
-							<FooterLink to="/signin">How it Works</FooterLink>
-							<FooterLink to="/signin">Testimonials</FooterLink>
-							<FooterLink to="/signin">Careers</FooterLink>
-							<FooterLink to="/signin">Investors</FooterLink>
-							<FooterLink to="/signin">Terms of Service</FooterLink>
+							<FooterLinkTitle></FooterLinkTitle>
+							<FooterLink 
+									to="catering"
+									smooth={true}
+									duration={500}
+									spy={true}
+									exact='true'
+									offset={0}
+								>
+								Catering
+							</FooterLink>
 						</FooterLinkItems>
 						<FooterLinkItems>
-							<FooterLinkTitle>Social Media</FooterLinkTitle>
-							<FooterLink to="/signin">Facebook</FooterLink>
-							<FooterLink to="/signin">Twitter</FooterLink>
-							<FooterLink to="/signin">Instagram</FooterLink>
-							<FooterLink to="/signin">GrubHub</FooterLink>
-							<FooterLink to="/signin">Yelp</FooterLink>
+							<FooterLinkTitle></FooterLinkTitle>
+							<FooterLink 
+									to="contact"
+									smooth={true}
+									duration={500}
+									spy={true}
+									exact='true'
+									offset={0}
+								>
+								Contact
+							</FooterLink>
 						</FooterLinkItems>
 					</FooterLinksWrapper>
 				</FooterLinksContainer>
 				<SocialMedia>
 					<SocialMediaWrap>
 						<SocialLogo to="/" onClick={toggleHome}>
-							DOlla
+							Taqueria Los Cunados
 						</SocialLogo>
-						<WebsiteRights>Dolla CopyRight {new Date().getFullYear()} All Rights reserved.</WebsiteRights>
+						<WebsiteRights>Taqueria Los Cunados CopyRight {new Date().getFullYear()} All Rights reserved.</WebsiteRights>
 						<SocialIcons>
 							<SocialIconLink href="/" target="_blank" aria-label="Facebook">
 								<FaFacebook />
